@@ -10,6 +10,6 @@
 
 @interface LBQuestion : NSObject
 
-- (NSDate *)date;
+@property (retain) NSDate *date;
 
 @end
