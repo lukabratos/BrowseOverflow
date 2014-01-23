@@ -12,4 +12,8 @@
 
 @property (retain) NSDate *date;
 
+@property (copy) NSString *title;
+
+@property NSInteger score;
+
 @end
