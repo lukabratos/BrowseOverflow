@@ -39,4 +39,10 @@
     XCTAssertEqualObjects(namedTopic.name, @"iPhone", @"the Topic should have the name I gave it");
 }
 
+- (void)testThatTopicHasATag
+{
+    LBTopic *taggedTopic = [[LBTopic alloc] initWithName:@"iPhone" tag:@"iphone"];
+    XCTAssertEqualObjects(taggedTopic.tag, @"iphone", @"Topic need to have tags");
+}
+
 @end
