@@ -10,6 +10,9 @@
 #import <XCTest/XCTest.h>
 
 @interface LBTopicTests : XCTestCase
+{
+    LBTopic *topic;
+}
 
 @end
 
@@ -18,31 +21,30 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here; it will be run once, before the first test case.
+    
+    topic = [[LBTopic alloc] initWithName:@"iPhone" tag:@"iphone"];
 }
 
 - (void)tearDown
 {
-    // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
+    
+    topic = nil;
 }
 
 - (void)testThatTopicExists
 {
-    LBTopic *newTopic = [[LBTopic alloc] init];
-    XCTAssertNotNil(newTopic, @"should be able to create a Topic instance");
+    XCTAssertNotNil(topic, @"should be able to create a Topic instance");
 }
 
 - (void)testThatTopicCanBeNamed
 {
-    LBTopic *namedTopic = [[LBTopic alloc] initWithName:@"iPhone" tag:@"iphone"];
-    XCTAssertEqualObjects(namedTopic.name, @"iPhone", @"the Topic should have the name I gave it");
+    XCTAssertEqualObjects(topic.name, @"iPhone", @"the Topic should have the name I gave it");
 }
 
 - (void)testThatTopicHasATag
 {
-    LBTopic *taggedTopic = [[LBTopic alloc] initWithName:@"iPhone" tag:@"iphone"];
-    XCTAssertEqualObjects(taggedTopic.tag, @"iphone", @"Topic need to have tags");
+    XCTAssertEqualObjects(topic.tag, @"iphone", @"Topic need to have tags");
 }
 
 @end
