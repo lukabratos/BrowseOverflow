@@ -10,4 +10,13 @@
 
 @implementation LBTopic
 
+- (id)initWithName:(NSString *)newName
+{
+    if (self = [self init]) {
+        _name = [newName copy];
+    }
+    
+    return self;
+}
+
 @end
