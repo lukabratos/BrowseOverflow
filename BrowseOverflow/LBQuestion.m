@@ -10,4 +10,9 @@
 
 @implementation LBQuestion
 
+- (NSDate *)date;
+{
+    return [NSDate date];
+}
+
 @end

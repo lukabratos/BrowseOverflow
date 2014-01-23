@@ -10,4 +10,6 @@
 
 @interface LBQuestion : NSObject
 
+- (NSDate *)date;
+
 @end
