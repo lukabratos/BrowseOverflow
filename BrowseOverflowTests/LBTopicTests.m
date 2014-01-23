@@ -33,4 +33,10 @@
     XCTAssertNotNil(newTopic, @"should be able to create a Topic instance");
 }
 
+- (void)testThatTopicCanBeNamed
+{
+    LBTopic *namedTopic = [[LBTopic alloc] initWithName:@"iPhone"];
+    XCTAssertEqualObjects(namedTopic.name, @"iPhone", @"the Topic should have the name I gave it");
+}
+
 @end
