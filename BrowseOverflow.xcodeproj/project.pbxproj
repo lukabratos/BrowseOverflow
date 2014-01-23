@@ -22,6 +22,7 @@
 		A16D7C07189176B2002BF23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16D7BE6189176B2002BF23E /* UIKit.framework */; };
 		A16D7C0F189176B2002BF23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A16D7C0D189176B2002BF23E /* InfoPlist.strings */; };
 		A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1A18918555002BF23E /* LBTopicTests.m */; };
+		A16D7C1E18918771002BF23E /* LBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1D18918771002BF23E /* LBTopic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		A16D7C0C189176B2002BF23E /* BrowseOverflowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrowseOverflowTests-Info.plist"; sourceTree = "<group>"; };
 		A16D7C0E189176B2002BF23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A16D7C1A18918555002BF23E /* LBTopicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTopicTests.m; sourceTree = "<group>"; };
+		A16D7C1C18918771002BF23E /* LBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTopic.h; sourceTree = "<group>"; };
+		A16D7C1D18918771002BF23E /* LBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTopic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				A16D7BFB189176B2002BF23E /* LBDetailViewController.m */,
 				A16D7BFD189176B2002BF23E /* Images.xcassets */,
 				A16D7BE9189176B2002BF23E /* Supporting Files */,
+				A16D7C1C18918771002BF23E /* LBTopic.h */,
+				A16D7C1D18918771002BF23E /* LBTopic.m */,
 			);
 			path = BrowseOverflow;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16D7C1E18918771002BF23E /* LBTopic.m in Sources */,
 				A16D7BF9189176B2002BF23E /* LBMasterViewController.m in Sources */,
 				A16D7BF3189176B2002BF23E /* LBAppDelegate.m in Sources */,
 				A16D7BEF189176B2002BF23E /* main.m in Sources */,
