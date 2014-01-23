@@ -23,6 +23,7 @@
 		A16D7C0F189176B2002BF23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A16D7C0D189176B2002BF23E /* InfoPlist.strings */; };
 		A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1A18918555002BF23E /* LBTopicTests.m */; };
 		A16D7C1E18918771002BF23E /* LBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1D18918771002BF23E /* LBTopic.m */; };
+		A16D7C201891A252002BF23E /* LBQuestionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1F1891A252002BF23E /* LBQuestionTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A16D7C1A18918555002BF23E /* LBTopicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTopicTests.m; sourceTree = "<group>"; };
 		A16D7C1C18918771002BF23E /* LBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTopic.h; sourceTree = "<group>"; };
 		A16D7C1D18918771002BF23E /* LBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTopic.m; sourceTree = "<group>"; };
+		A16D7C1F1891A252002BF23E /* LBQuestionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBQuestionTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +127,10 @@
 				A16D7BF8189176B2002BF23E /* LBMasterViewController.m */,
 				A16D7BFA189176B2002BF23E /* LBDetailViewController.h */,
 				A16D7BFB189176B2002BF23E /* LBDetailViewController.m */,
-				A16D7BFD189176B2002BF23E /* Images.xcassets */,
-				A16D7BE9189176B2002BF23E /* Supporting Files */,
 				A16D7C1C18918771002BF23E /* LBTopic.h */,
 				A16D7C1D18918771002BF23E /* LBTopic.m */,
+				A16D7BFD189176B2002BF23E /* Images.xcassets */,
+				A16D7BE9189176B2002BF23E /* Supporting Files */,
 			);
 			path = BrowseOverflow;
 			sourceTree = "<group>";
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				A16D7C1A18918555002BF23E /* LBTopicTests.m */,
+				A16D7C1F1891A252002BF23E /* LBQuestionTests.m */,
 				A16D7C0B189176B2002BF23E /* Supporting Files */,
 			);
 			path = BrowseOverflowTests;
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */,
+				A16D7C201891A252002BF23E /* LBQuestionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
