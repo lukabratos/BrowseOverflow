@@ -21,7 +21,7 @@
 		A16D7C06189176B2002BF23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16D7BE2189176B2002BF23E /* Foundation.framework */; };
 		A16D7C07189176B2002BF23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16D7BE6189176B2002BF23E /* UIKit.framework */; };
 		A16D7C0F189176B2002BF23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A16D7C0D189176B2002BF23E /* InfoPlist.strings */; };
-		A16D7C11189176B2002BF23E /* BrowseOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C10189176B2002BF23E /* BrowseOverflowTests.m */; };
+		A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1A18918555002BF23E /* LBTopicTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 		A16D7C04189176B2002BF23E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A16D7C0C189176B2002BF23E /* BrowseOverflowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrowseOverflowTests-Info.plist"; sourceTree = "<group>"; };
 		A16D7C0E189176B2002BF23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A16D7C10189176B2002BF23E /* BrowseOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseOverflowTests.m; sourceTree = "<group>"; };
+		A16D7C1A18918555002BF23E /* LBTopicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTopicTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 		A16D7C0A189176B2002BF23E /* BrowseOverflowTests */ = {
 			isa = PBXGroup;
 			children = (
-				A16D7C10189176B2002BF23E /* BrowseOverflowTests.m */,
+				A16D7C1A18918555002BF23E /* LBTopicTests.m */,
 				A16D7C0B189176B2002BF23E /* Supporting Files */,
 			);
 			path = BrowseOverflowTests;
@@ -266,7 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16D7C11189176B2002BF23E /* BrowseOverflowTests.m in Sources */,
+				A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
