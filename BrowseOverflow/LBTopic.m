@@ -10,10 +10,11 @@
 
 @implementation LBTopic
 
-- (id)initWithName:(NSString *)newName
+- (id)initWithName:(NSString *)newName tag:(NSString *)tag
 {
     if (self = [self init]) {
         _name = [newName copy];
+        _tag = [tag copy];
     }
     
     return self;

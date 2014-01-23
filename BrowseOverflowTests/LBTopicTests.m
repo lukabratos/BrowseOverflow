@@ -35,7 +35,7 @@
 
 - (void)testThatTopicCanBeNamed
 {
-    LBTopic *namedTopic = [[LBTopic alloc] initWithName:@"iPhone"];
+    LBTopic *namedTopic = [[LBTopic alloc] initWithName:@"iPhone" tag:@"iphone"];
     XCTAssertEqualObjects(namedTopic.name, @"iPhone", @"the Topic should have the name I gave it");
 }
 
