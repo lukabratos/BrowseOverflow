@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Luka. All rights reserved.
 //
 
+#import "LBQuestion.h"
 #import <XCTest/XCTest.h>
 
 @interface LBQuestionTests : XCTestCase
