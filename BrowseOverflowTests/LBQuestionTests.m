@@ -28,7 +28,10 @@
 - (void)testQuestionHasADate
 {
     LBQuestion *question = [[LBQuestion alloc] init];
-    XCTAssertTrue(question.date, @"Question needs to provide its date");
+    NSDate *testDate = [NSDate distantPast];
+    question.date = testDate;
+    
+    XCTAssertEqualObjects(question.date, testDate, @"Question needs to provide its date");
 }
 
 @end
