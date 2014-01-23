@@ -10,6 +10,9 @@
 #import <XCTest/XCTest.h>
 
 @interface LBQuestionTests : XCTestCase
+{
+    LBQuestion *question;
+}
 
 @end
 
@@ -18,20 +21,36 @@
 - (void)setUp
 {
     [super setUp];
+    
+    question = [[LBQuestion alloc] init];
+    question.date = [NSDate distantPast];
+    question.title = @"much test. so cool. wow!";
+    question.score = 1337;
 }
 
 - (void)tearDown
 {
     [super tearDown];
+    
+    question = nil;
 }
 
 - (void)testQuestionHasADate
 {
-    LBQuestion *question = [[LBQuestion alloc] init];
     NSDate *testDate = [NSDate distantPast];
     question.date = testDate;
     
     XCTAssertEqualObjects(question.date, testDate, @"Question needs to provide its date");
+}
+
+- (void)testQuestionsKeepScore
+{
+    XCTAssertEqual(question.score, 1337, @"Questions need a numeric score");
+}
+
+- (void)testQuestionHasATitle
+{
+    XCTAssertEqualObjects(question.title, @"much test. so cool. wow!", @"Question should know its title");
 }
 
 @end
