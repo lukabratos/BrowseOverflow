@@ -24,6 +24,7 @@
 		A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1A18918555002BF23E /* LBTopicTests.m */; };
 		A16D7C1E18918771002BF23E /* LBTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1D18918771002BF23E /* LBTopic.m */; };
 		A16D7C201891A252002BF23E /* LBQuestionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16D7C1F1891A252002BF23E /* LBQuestionTests.m */; };
+		A1BD5C8B1891AB5E00CD4161 /* LBQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = A1BD5C8A1891AB5E00CD4161 /* LBQuestion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		A16D7C1C18918771002BF23E /* LBTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBTopic.h; sourceTree = "<group>"; };
 		A16D7C1D18918771002BF23E /* LBTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBTopic.m; sourceTree = "<group>"; };
 		A16D7C1F1891A252002BF23E /* LBQuestionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBQuestionTests.m; sourceTree = "<group>"; };
+		A1BD5C891891AB5E00CD4161 /* LBQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBQuestion.h; sourceTree = "<group>"; };
+		A1BD5C8A1891AB5E00CD4161 /* LBQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBQuestion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 		A16D7BE8189176B2002BF23E /* BrowseOverflow */ = {
 			isa = PBXGroup;
 			children = (
+				A1BD5C891891AB5E00CD4161 /* LBQuestion.h */,
+				A1BD5C8A1891AB5E00CD4161 /* LBQuestion.m */,
 				A16D7BF1189176B2002BF23E /* LBAppDelegate.h */,
 				A16D7BF2189176B2002BF23E /* LBAppDelegate.m */,
 				A16D7BF4189176B2002BF23E /* Main.storyboard */,
@@ -268,6 +273,7 @@
 				A16D7BF3189176B2002BF23E /* LBAppDelegate.m in Sources */,
 				A16D7BEF189176B2002BF23E /* main.m in Sources */,
 				A16D7BFC189176B2002BF23E /* LBDetailViewController.m in Sources */,
+				A1BD5C8B1891AB5E00CD4161 /* LBQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +483,7 @@
 				A16D7C16189176B2002BF23E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A16D7C17189176B2002BF23E /* Build configuration list for PBXNativeTarget "BrowseOverflowTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +492,7 @@
 				A16D7C19189176B2002BF23E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
