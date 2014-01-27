@@ -7,6 +7,7 @@
 //
 
 #import "LBTopic.h"
+#import "LBQuestion.h"
 #import <XCTest/XCTest.h>
 
 @interface LBTopicTests : XCTestCase
@@ -50,6 +51,18 @@
 - (void)testForAListOfQuestions
 {
     XCTAssertTrue([[topic recentQuestions] isKindOfClass:[NSArray class]], @"Topics should provide a list of recent questions");
+}
+
+- (void)testForInitiallyEmptyQuestionList
+{
+    XCTAssertEqual([[topic recentQuestions] count], (NSUInteger)0, @"No questions yet, count should be zero");
+}
+
+- (void)testAddingAQuestionToTheList
+{
+    LBQuestion *question = [[LBQuestion alloc] init];
+    [topic addQuestion:question];
+    XCTAssertEqual([[topic recentQuestions] count], (NSUInteger)1, @"Add a question, and the count of questions should go up");
 }
 
 @end
