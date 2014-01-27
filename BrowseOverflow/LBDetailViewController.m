@@ -9,7 +9,9 @@
 #import "LBDetailViewController.h"
 
 @interface LBDetailViewController ()
+
 - (void)configureView;
+
 @end
 
 @implementation LBDetailViewController
