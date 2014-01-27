@@ -83,4 +83,14 @@
     XCTAssertEqualObjects([first.date laterDate:second.date], first.date, @"The later question should appear first in the list");
 }
 
+- (void)testLimitOfTwentyQuestions
+{
+    LBQuestion *question = [[LBQuestion alloc] init];
+    for(NSInteger i = 0; i < 25; i++) {
+        [topic addQuestion:question];
+    }
+    
+    XCTAssertTrue([[topic recentQuestions] count] < 21, @"There should never be more than twenty questions");
+}
+
 @end
