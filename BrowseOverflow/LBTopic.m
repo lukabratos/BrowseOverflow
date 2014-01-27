@@ -23,12 +23,19 @@
 
 - (NSArray *)recentQuestions
 {
-    return [self.questions sortedArrayUsingComparator:^(id obj1, id obj2) {
+    NSArray *sortedQuestions = [self.questions sortedArrayUsingComparator:^(id obj1, id obj2) {
         LBQuestion *question1 = (LBQuestion *)obj1;
         LBQuestion *question2 = (LBQuestion *)obj2;
         
         return [question2.date compare:question1.date];
     }];
+    
+    if([sortedQuestions count] < 21) {
+        return  sortedQuestions;
+    }
+    else {
+        return [sortedQuestions subarrayWithRange:NSMakeRange(0, 20)];
+    }
 }
 
 - (void)addQuestion:(LBQuestion *)question
