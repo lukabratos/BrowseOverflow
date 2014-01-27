@@ -10,4 +10,6 @@
 
 @interface LBMasterViewController : UITableViewController
 
+@property NSMutableArray *objects;
+
 @end

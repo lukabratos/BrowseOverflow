@@ -12,7 +12,7 @@
 
 - (id)initWithName:(NSString *)name avatarLocation:(NSString *)avatar
 {
-    if(self = [self init]) {
+    if (self = [super init]) {
         _name = name;
         _avatarURL = [[NSURL alloc] initWithString:avatar];
     }

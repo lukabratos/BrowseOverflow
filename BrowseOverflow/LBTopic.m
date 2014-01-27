@@ -12,7 +12,7 @@
 
 - (id)initWithName:(NSString *)newName tag:(NSString *)tag
 {
-    if (self = [self init]) {
+    if (self = [super init]) {
         _name = [newName copy];
         _tag = [tag copy];
         _questions = [[NSArray alloc] init];
@@ -38,7 +38,7 @@
 - (void)addQuestion:(LBQuestion *)question
 {
     NSArray *newQuestions = [self.questions arrayByAddingObject:question];
-    if([newQuestions count] > 20) {
+    if ([newQuestions count] > 20) {
         newQuestions = [self sortQuestionsLatestFirst:newQuestions];
         newQuestions = [newQuestions subarrayWithRange:NSMakeRange(0, 20)];
     }
