@@ -6,9 +6,14 @@
 //  Copyright (c) 2014 Luka. All rights reserved.
 //
 
+#import "LBAnswer.h"
 #import <XCTest/XCTest.h>
 
 @interface LBAnswerTests : XCTestCase
+{
+    LBAnswer *answer;
+    LBAnswer *otherAnswer;
+}
 
 @end
 
@@ -17,18 +22,69 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here; it will be run once, before the first test case.
+    
+    answer = [[LBAnswer alloc] init];
+    answer.text = @"Le Answer Text";
+    answer.person = [[LBPerson alloc] initWithName:@"Luka" avatarLocation:@"www.lukabratos.me/avatar.png"];
+    answer.score = 1337;
+    
+    otherAnswer = [[LBAnswer alloc] init];
+    otherAnswer.text = @"Random testing text.";
+    otherAnswer.score = 1337;
 }
 
 - (void)tearDown
 {
-    // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
+    
+    answer = nil;
 }
 
-- (void)testExample
+- (void)testAnswerHasSomeText
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertEqualObjects(answer.text, @"Le Answer Text", @"Answers need to contain some text");
 }
 
+- (void)testSomeoneProvidedTheAnswer
+{
+    XCTAssertTrue([answer.person isKindOfClass:[LBPerson class]], @"Person gave this answer");
+}
+
+- (void)testAnswersNotAcceptedByDefault
+{
+    XCTAssertFalse(answer.accepted, @"Answer not accepted by default");
+}
+
+- (void)testAnswerCanBeAccepted
+{
+    XCTAssertNoThrow(answer.accepted = YES, @"It is possible to accept an answer");
+}
+
+- (void)testAnswerHasAScore
+{
+    XCTAssertTrue(answer.score == 1337, @"Answer's score can be retrieved");
+}
+
+- (void)testAcceptedAnswerComesBeforeUnaccepted
+{
+    otherAnswer.accepted = YES;
+    otherAnswer.score = answer.score + 10;
+    
+    XCTAssertEqual([answer compare:otherAnswer], NSOrderedDescending, @"Accepted answer should come first");
+    XCTAssertEqual([otherAnswer compare:answer], NSOrderedAscending, @"Unaccepted answer should come last");
+}
+
+- (void)testAnswersWithEqualScoresCompareEqually
+{
+    XCTAssertEqual([answer compare:otherAnswer], NSOrderedSame, @"Both answers of equal rank");
+    XCTAssertEqual([otherAnswer compare: answer], NSOrderedSame, @"Each answer has the same rank");
+}
+
+- (void)testLowerScoringAnswerComesAfterHigher
+{
+    otherAnswer.score = answer.score + 10;
+    XCTAssertEqual([answer compare: otherAnswer], NSOrderedDescending, @"Higher score comes first");
+    XCTAssertEqual([otherAnswer compare: answer], NSOrderedAscending, @"Lower score comes last");
+}
+   
 @end
