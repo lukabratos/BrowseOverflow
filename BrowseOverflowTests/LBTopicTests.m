@@ -65,4 +65,22 @@
     XCTAssertEqual([[topic recentQuestions] count], (NSUInteger)1, @"Add a question, and the count of questions should go up");
 }
 
+- (void)testQuestionsAreListedChronologically
+{
+    LBQuestion *question1 = [[LBQuestion alloc] init];
+    question1.date = [NSDate distantPast];
+    
+    LBQuestion *question2 = [[LBQuestion alloc] init];
+    question2.date = [NSDate distantFuture];
+    
+    [topic addQuestion:question1];
+    [topic addQuestion:question2];
+    
+    NSArray *questions = [topic recentQuestions];
+    LBQuestion *first = [questions objectAtIndex:0];
+    LBQuestion *second = [questions objectAtIndex:1];
+    
+    XCTAssertEqualObjects([first.date laterDate:second.date], first.date, @"The later question should appear first in the list");
+}
+
 @end
