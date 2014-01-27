@@ -6,9 +6,13 @@
 //  Copyright (c) 2014 Luka. All rights reserved.
 //
 
+#import "LBPerson.h"
 #import <XCTest/XCTest.h>
 
 @interface LBPersonTests : XCTestCase
+{
+    LBPerson *person;
+}
 
 @end
 
@@ -18,17 +22,26 @@
 {
     [super setUp];
     // Put setup code here; it will be run once, before the first test case.
+    
+    person = [[LBPerson alloc] initWithName:@"Luka" avatarLocation:@"www.lukabratos.me/avatar.png"];
 }
 
 - (void)tearDown
 {
     // Put teardown code here; it will be run once, after the last test case.
     [super tearDown];
+    
+    person = nil;
 }
 
-- (void)testExample
+- (void)testThatPersonHasTheRightName
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertEqualObjects(person.name, @"Luka", @"expecting a person to provide its name");
+}
+
+- (void)testThatPersonHasAnAvatarURL
+{
+    XCTAssertEqualObjects([person.avatarURL absoluteString], @"www.lukabratos.me/avatar.png", "The Person's avatar should be represented by a URL");
 }
 
 @end
