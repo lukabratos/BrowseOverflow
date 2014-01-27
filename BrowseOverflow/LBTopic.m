@@ -21,26 +21,29 @@
     return self;
 }
 
-- (NSArray *)recentQuestions
-{
-    NSArray *sortedQuestions = [self.questions sortedArrayUsingComparator:^(id obj1, id obj2) {
+- (NSArray *)sortQuestionsLatestFirst: (NSArray *)questionList {
+    return [self.questions sortedArrayUsingComparator:^(id obj1, id obj2) {
         LBQuestion *question1 = (LBQuestion *)obj1;
         LBQuestion *question2 = (LBQuestion *)obj2;
         
         return [question2.date compare:question1.date];
     }];
-    
-    if([sortedQuestions count] < 21) {
-        return  sortedQuestions;
-    }
-    else {
-        return [sortedQuestions subarrayWithRange:NSMakeRange(0, 20)];
-    }
+}
+
+- (NSArray *)recentQuestions
+{
+    return [self sortQuestionsLatestFirst:self.questions];
 }
 
 - (void)addQuestion:(LBQuestion *)question
 {
-    self.questions = [self.questions arrayByAddingObject:question];
+    NSArray *newQuestions = [self.questions arrayByAddingObject:question];
+    if([newQuestions count] > 20) {
+        newQuestions = [self sortQuestionsLatestFirst:newQuestions];
+        newQuestions = [newQuestions subarrayWithRange:NSMakeRange(0, 20)];
+    }
+    
+    self.questions = newQuestions;
 }
 
 @end
