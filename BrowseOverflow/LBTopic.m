@@ -15,6 +15,7 @@
     if (self = [self init]) {
         _name = [newName copy];
         _tag = [tag copy];
+        _questions = [[NSArray alloc] init];
     }
     
     return self;
@@ -22,7 +23,12 @@
 
 - (NSArray *)recentQuestions
 {
-    return [NSArray array];
+    return self.questions;
+}
+
+- (void)addQuestion:(LBQuestion *)question
+{
+    self.questions = [self.questions arrayByAddingObject:question];
 }
 
 @end
