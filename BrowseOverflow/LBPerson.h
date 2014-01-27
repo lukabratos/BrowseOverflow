@@ -10,4 +10,9 @@
 
 @interface LBPerson : NSObject
 
+@property (readonly, strong) NSString *name;
+@property (readonly, strong) NSURL *avatarURL;
+
+- (id)initWithName:(NSString *)name avatarLocation:(NSString *)avatar;
+
 @end

@@ -10,4 +10,14 @@
 
 @implementation LBPerson
 
+- (id)initWithName:(NSString *)name avatarLocation:(NSString *)avatar
+{
+    if(self = [self init]) {
+        _name = name;
+        _avatarURL = [[NSURL alloc] initWithString:avatar];
+    }
+    
+    return self;
+}
+
 @end
