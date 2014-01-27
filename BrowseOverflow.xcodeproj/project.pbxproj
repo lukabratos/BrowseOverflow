@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12703DB18967D350029779C /* LBPersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A12703DA18967D350029779C /* LBPersonTests.m */; };
+		A12703DE18967DEE0029779C /* LBPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = A12703DD18967DEE0029779C /* LBPerson.m */; };
 		A16D7BE3189176B2002BF23E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16D7BE2189176B2002BF23E /* Foundation.framework */; };
 		A16D7BE5189176B2002BF23E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16D7BE4189176B2002BF23E /* CoreGraphics.framework */; };
 		A16D7BE7189176B2002BF23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16D7BE6189176B2002BF23E /* UIKit.framework */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A12703DA18967D350029779C /* LBPersonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBPersonTests.m; sourceTree = "<group>"; };
+		A12703DC18967DEE0029779C /* LBPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBPerson.h; sourceTree = "<group>"; };
+		A12703DD18967DEE0029779C /* LBPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBPerson.m; sourceTree = "<group>"; };
 		A16D7BDF189176B2002BF23E /* BrowseOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowseOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16D7BE2189176B2002BF23E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A16D7BE4189176B2002BF23E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -136,6 +141,8 @@
 				A16D7C1D18918771002BF23E /* LBTopic.m */,
 				A16D7BFD189176B2002BF23E /* Images.xcassets */,
 				A16D7BE9189176B2002BF23E /* Supporting Files */,
+				A12703DC18967DEE0029779C /* LBPerson.h */,
+				A12703DD18967DEE0029779C /* LBPerson.m */,
 			);
 			path = BrowseOverflow;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 				A16D7C1A18918555002BF23E /* LBTopicTests.m */,
 				A16D7C1F1891A252002BF23E /* LBQuestionTests.m */,
 				A16D7C0B189176B2002BF23E /* Supporting Files */,
+				A12703DA18967D350029779C /* LBPersonTests.m */,
 			);
 			path = BrowseOverflowTests;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16D7C1E18918771002BF23E /* LBTopic.m in Sources */,
+				A12703DE18967DEE0029779C /* LBPerson.m in Sources */,
 				A16D7BF9189176B2002BF23E /* LBMasterViewController.m in Sources */,
 				A16D7BF3189176B2002BF23E /* LBAppDelegate.m in Sources */,
 				A16D7BEF189176B2002BF23E /* main.m in Sources */,
@@ -283,6 +292,7 @@
 			files = (
 				A16D7C1B18918555002BF23E /* LBTopicTests.m in Sources */,
 				A16D7C201891A252002BF23E /* LBQuestionTests.m in Sources */,
+				A12703DB18967D350029779C /* LBPersonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
